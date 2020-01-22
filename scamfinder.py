@@ -6,9 +6,15 @@ from datetime import datetime, timezone
 
 def find_possible_phone_number(str):
 
+    # Sometimes we have strings that have a single I or O in them
+    # ... Can I Uninstall ...
+    # This I would be replaced with a 1 later on and cause the number to become invalid.
+    # Look for these sorts of situations and remove them!
+    clean = re.sub("[a-zA-Z] [IO] [a-zA-Z]", "", str)
+
     # Filter out words that have more than 3 consequent characters
     clean = "".join(filter(None, re.split(
-        '(?:[a-zA-Z]{3,}|[\$\@()+.])+', str)))
+        '(?:[a-zA-Z]{3,}|[\$\@()+.])+', clean)))
 
     # Remove all special characters from string
     clean = ''.join(e for e in clean if e.isalnum())
