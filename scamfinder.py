@@ -116,5 +116,4 @@ for nr in numbers:
         print("Title: {}".format(nr[3]))
         print("Parsed Number: {}".format(nr[1]))
         print("Link: {}".format(nr[2]))
-        # print("[{}] - Possible Number: {} - {}".format(age,nr[1],nr[2]))
         displayed.append(nr[1])
