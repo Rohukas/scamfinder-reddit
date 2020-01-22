@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 def find_possible_phone_number(str):
 
-    # Filter our words that have more than 3 consequent characters
+    # Filter out words that have more than 3 consequent characters
     clean = "".join(filter(None, re.split(
         '(?:[a-zA-Z]{3,}|[\$\@()+.])+', str)))
 
