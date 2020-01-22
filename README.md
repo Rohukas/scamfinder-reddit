@@ -1,4 +1,3 @@
-#scamfinder.py
 **Scamfinder**
 Scamfinder is a tool used for finding scammers numbers from reddit.
 It uses the reddit search function to search the query you entered(i.e 'tech support') and attempt to parse a phone numbers from the results.
