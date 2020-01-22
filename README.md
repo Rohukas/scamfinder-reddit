@@ -9,8 +9,8 @@ Parsed Number: 1234567890\
 Link: _Link to reddit post_
 
 **How does it work?**\
-It works by using the reddit search mechanism and parsing the titles of every given result.
-Example title: _HP Printer Tech support PHoNe {1/=855/=4O9/=1555} NuMbER _{@#\$}_ atit_
+It works by using the reddit search mechanism and parsing the titles of every given result.\
+Example title: _HP Printer Tech support PHoNe {1/=855/=4O9/=1555} NuMbER _{@#\$}_ atit_\
 The script parses the number from the title by cleaning and doing some more tricks.
 
 **How do I use it?**\
