@@ -1,5 +1,6 @@
 import praw
 import re
+import uuid
 from datetime import datetime, timezone
 
 
@@ -75,7 +76,7 @@ if client_secret is "CLIENT_SECRET_HERE" or client_id is "CLIENT_ID_HERE":
 
 reddit = praw.Reddit(client_id=client_id,
                      client_secret=client_secret,
-                     user_agent='RohukasBot23')
+                     user_agent=str(uuid.uuid4()))
 
 numbers = []
 
