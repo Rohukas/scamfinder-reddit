@@ -57,9 +57,16 @@ def show_all():
     return show_all_input is 1
 
 
-# print(find_possible_phone_numbers(test))
-client_secret = ""
-client_id = ""
+# Enter your client_secret and client_id here
+client_secret = "CLIENT_SECRET_HERE"
+client_id = "CLIENT_ID_HERE"
+if client_secret is "CLIENT_SECRET_HERE" or client_id is "CLIENT_ID_HERE":
+    print("Missing client_id or client_secret.")
+    print("You can get the credentials by following this tutorial:")
+    print("https://redditclient.readthedocs.io/en/latest/oauth/")
+    print("Follow the tutorial and paste the client_id and client_secret into the lines above")
+    exit()
+
 reddit = praw.Reddit(client_id=client_id,
                      client_secret=client_secret,
                      user_agent='Bot')
@@ -98,7 +105,7 @@ for nr in numbers:
         else:
             age = "{} min old".format(round(nr[0] / 60))
 
-        print ("----------")
+        print("----------")
         print("[{}]".format(age))
         print("Title: {}".format(nr[3]))
         print("Parsed Number: {}".format(nr[1]))
