@@ -25,12 +25,14 @@ def find_possible_phone_number(str):
 def get_time_filter():
     # Ask for time frame
     time_filter_input = int(
-        input("Enter time filter:\n1 - Hour\n2 - Day\nChoice: "))
+        input("Enter time filter:\n1 - Hour\n2 - Day\n3 - Week\nChoice: "))
     time_filter = ""
     if time_filter_input is 1:
         time_filter = "hour"
-    else:
+    elif time_filter_input is 2:
         time_filter = "day"
+    else:
+        time_filter = "week"
     return time_filter
 
 
@@ -57,6 +59,10 @@ def show_all():
     return show_all_input is 1
 
 
+def get_query():
+    return input("Enter search query. Try something like 'tech support' or 'customer support'.\nQuery: ")
+
+
 # Enter your client_secret and client_id here
 client_secret = "CLIENT_SECRET_HERE"
 client_id = "CLIENT_ID_HERE"
@@ -69,7 +75,7 @@ if client_secret is "CLIENT_SECRET_HERE" or client_id is "CLIENT_ID_HERE":
 
 reddit = praw.Reddit(client_id=client_id,
                      client_secret=client_secret,
-                     user_agent='Bot')
+                     user_agent='RohukasBot23')
 
 numbers = []
 
@@ -77,11 +83,11 @@ time_filter = get_time_filter()
 sort_by = get_sort_by()
 limit = get_max_posts_to_load()
 show_all = show_all()
+query = get_query()
 all = reddit.subreddit("all")
 
-
 numbers = []
-for i in all.search('tech support', limit=limit, time_filter=time_filter, sort=sort_by):
+for i in all.search(query, limit=limit, time_filter=time_filter, sort=sort_by):
     phone_nr = find_possible_phone_number(i.title)
     if phone_nr is not None:
         created_at = datetime.fromtimestamp(i.created_utc)
