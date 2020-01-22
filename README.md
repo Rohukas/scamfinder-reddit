@@ -6,7 +6,7 @@ It uses the reddit search function to search the query you entered(i.e 'tech sup
 [X min old]\
 Title: SBCglobal MaiL TecH SuPPoRt 1.234.(567).8901 Jrkpvas\
 Parsed Number: 1234567890\
-Link: _Link to reddit post_\
+Link: _Link to reddit post_
 
 **How does it work?**\
 It works by using the reddit search mechanism and parsing the titles of every given result.
@@ -21,14 +21,14 @@ Paste the client_id and client_secret into the code
 
 **Dependencies**\
 The script uses PRAW - [https://praw.readthedocs.io/en/latest/](https://praw.readthedocs.io/en/latest/)
-You can install praw using pip.\
+You can install praw using pip.
 
      pip install praw
 
-or\
+or
 
     python -m pip install praw
 
-**How to run?**\
+**How to run?**
 
     python scamfinder.py
