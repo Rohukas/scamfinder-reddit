@@ -71,8 +71,8 @@ def get_query():
 
 
 # Enter your client_secret and client_id here
-client_secret = "aMt8GcsXmT6OkLFP6rdDyZ6ZUUU"
-client_id = "TE8gp-edKDJj7g"
+client_secret = "CLIENT_SECRET_HERE"
+client_id = "CLIENT_ID_HERE"
 if client_secret is "CLIENT_SECRET_HERE" or client_id is "CLIENT_ID_HERE":
     print("Missing client_id or client_secret.")
     print("You can get the credentials by following this tutorial:")
