@@ -1,34 +1,34 @@
-**Scamfinder**
+**Scamfinder**\
 Scamfinder is a tool used for finding scammers numbers from reddit.
 It uses the reddit search function to search the query you entered(i.e 'tech support') and attempt to parse a phone numbers from the results.
 
-**Example Output**
-[X min old]
-Title: SBCglobal MaiL TecH SuPPoRt 1.234.(567).8901 Jrkpvas
-Parsed Number: 1234567890
-Link: _Link to reddit post_
+**Example Output**\
+[X min old]\
+Title: SBCglobal MaiL TecH SuPPoRt 1.234.(567).8901 Jrkpvas\
+Parsed Number: 1234567890\
+Link: _Link to reddit post_\
 
-**How does it work?**
+**How does it work?**\
 It works by using the reddit search mechanism and parsing the titles of every given result.
 Example title: _HP Printer Tech support PHoNe {1/=855/=4O9/=1555} NuMbER _{@#\$}_ atit_
 The script parses the number from the title by cleaning and doing some more tricks.
 
-**How do I use it?**
+**How do I use it?**\
 In order to use it you must first create a Reddit App and get the client_secret and client_id values.
 You can create an app and get the client_id and client_secret using this guide:
 https://redditclient.readthedocs.io/en/latest/oauth/
 Paste the client_id and client_secret into the code
 
-**Dependencies**
+**Dependencies**\
 The script uses PRAW - [https://praw.readthedocs.io/en/latest/](https://praw.readthedocs.io/en/latest/)
-You can install praw using pip.
+You can install praw using pip.\
 
      pip install praw
 
-or
+or\
 
     python -m pip install praw
 
-**How to run?**
+**How to run?**\
 
     python scamfinder.py
