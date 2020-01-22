@@ -1,0 +1,1 @@
+# scamfinder.py
