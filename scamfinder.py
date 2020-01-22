@@ -107,7 +107,7 @@ for nr in numbers:
         # More than 60 minutes ago
         if round(nr[0] / 60) > 60:
             age = "{} hours old".format(
-                round(nr[0] / 60 / 60))  # Minutes to hours
+                round(nr[0] / 60 / 60))  # seconds to hours
         else:
             age = "{} min old".format(round(nr[0] / 60))
 
