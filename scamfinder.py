@@ -71,8 +71,8 @@ def get_query():
 
 
 # Enter your client_secret and client_id here
-client_secret = "CLIENT_SECRET_HERE"
-client_id = "CLIENT_ID_HERE"
+client_secret = "aMt8GcsXmT6OkLFP6rdDyZ6ZUUU"
+client_id = "TE8gp-edKDJj7g"
 if client_secret is "CLIENT_SECRET_HERE" or client_id is "CLIENT_ID_HERE":
     print("Missing client_id or client_secret.")
     print("You can get the credentials by following this tutorial:")
@@ -121,6 +121,6 @@ for nr in numbers:
         print("----------")
         print("[{}]".format(age))
         print("Title: {}".format(nr[3]))
-        print("Parsed Number: {}".format(nr[1]))
+        print("Parsed Number: {}".format(int(nr[1])))
         print("Link: {}".format(nr[2]))
         displayed.append(nr[1])
