@@ -1,8 +1,8 @@
 **Before you start**\
 Because some people had trouble getting the script to work initially I have made a web application for it.\
-https://rohukas.github.io/scamfinder/
-This requires no setup and you can simply start finding numbers withing seconds.
-
+https://rohukas.github.io/scamfinder/ \
+This requires no setup and you can simply start finding numbers withing seconds. \
+If you still wish to use the python version then read below on how to set it up!
 **Scamfinder**\
 Scamfinder is a tool used for finding scammers numbers from reddit.
 It uses the reddit search function to search the query you entered(i.e 'tech support') and attempt to parse a phone numbers from the results.
