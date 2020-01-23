@@ -96,7 +96,7 @@ all = reddit.subreddit("all")
 numbers = []
 for i in all.search(query, limit=limit, time_filter=time_filter, sort=sort_by):
     phone_nr = find_possible_phone_number(i.title)
-    if phone_nr == not None:
+    if phone_nr != None:
         created_at = datetime.fromtimestamp(i.created_utc)
         now = datetime.now()
         difference = now - created_at
