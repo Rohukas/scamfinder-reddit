@@ -34,9 +34,9 @@ def get_time_filter():
     time_filter_input = int(
         input("Enter time filter:\n1 - Hour\n2 - Day\n3 - Week\nChoice: "))
     time_filter = ""
-    if time_filter_input is 1:
+    if time_filter_input == 1:
         time_filter = "hour"
-    elif time_filter_input is 2:
+    elif time_filter_input == 2:
         time_filter = "day"
     else:
         time_filter = "week"
@@ -47,9 +47,9 @@ def get_sort_by():
     sort_by_input = int(
         input("What to sort by?:\n1 - new\n2 - relevance\n3 - hot\nChoice: "))
     sort_by = ""
-    if sort_by_input is 1:
+    if sort_by_input == 1:
         sort_by = "new"
-    elif sort_by_input is 2:
+    elif sort_by_input == 2:
         sort_by = "relevance"
     else:
         sort_by = "hot"
@@ -63,7 +63,7 @@ def get_max_posts_to_load():
 def show_all():
     show_all_input = int(
         input("Show duplicate numbers?:\n1 - Yes\n2 - No\nChoice: "))
-    return show_all_input is 1
+    return show_all_input == 1
 
 
 def get_query():
@@ -73,7 +73,7 @@ def get_query():
 # Enter your client_secret and client_id here
 client_secret = "CLIENT_SECRET_HERE"
 client_id = "CLIENT_ID_HERE"
-if client_secret is "CLIENT_SECRET_HERE" or client_id is "CLIENT_ID_HERE":
+if client_secret == "CLIENT_SECRET_HERE" or client_id == "CLIENT_ID_HERE":
     print("Missing client_id or client_secret.")
     print("You can get the credentials by following this tutorial:")
     print("https://redditclient.readthedocs.io/en/latest/oauth/")
@@ -96,7 +96,7 @@ all = reddit.subreddit("all")
 numbers = []
 for i in all.search(query, limit=limit, time_filter=time_filter, sort=sort_by):
     phone_nr = find_possible_phone_number(i.title)
-    if phone_nr is not None:
+    if phone_nr == not None:
         created_at = datetime.fromtimestamp(i.created_utc)
         now = datetime.now()
         difference = now - created_at
